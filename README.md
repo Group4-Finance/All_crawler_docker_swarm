@@ -11,7 +11,7 @@ docker swarm init
 ## 創建 docker swarm network  
 docker network create --scope=swarm --driver=overlay network <名稱>
 
-ex: docker network create --scope=swarm --driver=overlay my_swarm_network
+Ex: docker network create --scope=swarm --driver=overlay my_swarm_network
 
 ## 拉取官方image
 docker pull portainer/agent
@@ -20,12 +20,12 @@ docker pull portainer/portainer-ce:2.0.1
 ## 部屬portainer
 docker stack deploy -c portainer.yml <名稱>
 
-ex: docker stack deploy -c portainer.yml por
+Ex: docker stack deploy -c portainer.yml por
 
 ## 創建 volume
 docker volume create <名稱>
 
-ex: docker volume create mysql
+Ex: docker volume create mysql
 
 ## 啟動 yml 檔
 docker stack deploy --with-registry-auth -c rabbitmq-swarm.yml rabbitmq
@@ -40,7 +40,7 @@ DOCKER_IMAGE_FULL=<填入自己 api 的 image 完整名稱> docker stack deploy 
 
 除了portainer、mysql、rabbitmq，後面三個 yml 檔啟動完必須到 http://127.0.0.1:9000/ 
 的 swarm ，點選 docker-desktop，依據 worker、producer、api 的 service 數量 增加相應的 label 數量，接著查看以上三個 yml 檔 service 底下的 constraints ，填入對應的 name 以及 value，填完按下 apply changes 。
-ex: constraints: [node.labels.api == true]  在 label 的 name 填入 api 、 value 填入 true
+Ex: constraints: [node.labels.api == true]  在 label 的 name 填入 api 、 value 填入 true
 
 ## 離開docker swarm
 docker swarm leave --force
