@@ -13,7 +13,7 @@ services:
       MYSQL_PASSWORD: test          # 該用戶的密碼
       MYSQL_ROOT_PASSWORD: test     # root 用戶密碼
     volumes:
-      - all_crawler_storage_mysql_mysql:/var/lib/mysql        # 將資料庫資料持久化到 volume
+      - mysql:/var/lib/mysql        # 將資料庫資料持久化到 volume
     # 以下是 Docker Swarm 模式的設定
     deploy:
       mode: replicated              # 使用 replicated 模式，非 global
@@ -52,5 +52,5 @@ networks:
     external: true                 # 使用外部建立的 overlay 網路（需先執行 create）
 
 volumes:
-   all_crawler_storage_mysql_mysql:
+   mysql:
     external: true                 # 使用事先建立好的 volume（避免 Docker stack 自動建立）
