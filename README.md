@@ -1,8 +1,7 @@
 # Swarm 流程
 ## 前置工作
-建立 crawler 和 api 的 image
-必須先建立這兩個image，後續啟動 docker swarm 的 yml 檔讀取對應 image
-才能讓docker去執行爬蟲、發送任務以及建立api
+必須先建立 爬蟲 以及 api 這兩個 image，後續啟動 docker swarm 的 yml 檔時會讀取對應的 image
+讓docker去執行爬蟲、發送任務以及建立api
 
 前面的爬蟲、發送任務、mysql必須確保每個階段都能正常運作，否則到後面 swarm 一樣會出問題。
 
