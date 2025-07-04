@@ -32,7 +32,7 @@ docker stack deploy --with-registry-auth -c rabbitmq-swarm.yml rabbitmq
 
 docker stack deploy --with-registry-auth -c mysql-swarm.yml mysql
 
-DOCKER_IMAGE_FULL=<填入自己的image的完整名稱> docker stack deploy --with-registry-auth -c docker-compose-worker-swarm.yml crawlerworker
+DOCKER_IMAGE_FULL=<填入自己image的完整名稱> docker stack deploy --with-registry-auth -c docker-compose-worker-swarm.yml crawlerworker
 
 DOCKER_IMAGE_FULL=<填入自己image的完整名稱> docker stack deploy --with-registry-auth -c docker-compose-producer-swarm.yml producer
 
