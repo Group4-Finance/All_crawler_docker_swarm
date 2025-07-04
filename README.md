@@ -10,6 +10,7 @@ docker swarm init
 
 ## 創建 docker swarm network  
 docker network create --scope=swarm --driver=overlay network <名稱>
+
 ex: docker network create --scope=swarm --driver=overlay my_swarm_network
 
 ## 拉取官方image
@@ -18,10 +19,12 @@ docker pull portainer/portainer-ce:2.0.1
 
 ## 部屬portainer
 docker stack deploy -c portainer.yml <名稱>
+
 ex: docker stack deploy -c portainer.yml por
 
 ## 創建 volume
 docker volume create <名稱>
+
 ex: docker volume create mysql
 
 ## 啟動 yml 檔
